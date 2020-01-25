@@ -2,6 +2,7 @@
 
 require 'httpi'
 
+require 'active_campaign/client/automations'
 require 'active_campaign/client/campaigns'
 require 'active_campaign/client/contacts'
 require 'active_campaign/client/deals'
@@ -16,6 +17,7 @@ module ActiveCampaign
   class Client
     extend Forwardable
 
+    include ActiveCampaign::Client::Automations
     include ActiveCampaign::Client::Campaigns
     include ActiveCampaign::Client::Contacts
     include ActiveCampaign::Client::Deals
